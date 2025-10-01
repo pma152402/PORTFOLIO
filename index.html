@@ -58,12 +58,14 @@
         background-repeat: no-repeat;
         background-position: 30%;
         background-size: cover;
-        height: 330px;
+        height: 800px;
         border-bottom: 2px solid black;
+        margin-bottom: -40px;
       }
 
       .hero_section_titles {
-        padding-top: 200px;
+        padding-top: 540px;
+        padding-left: 50px;
         text-shadow: 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black,
           0px -1px 0px black;
         margin-left: 30px;
@@ -86,30 +88,41 @@
         <li class="navbar_list_item">
           <span class="item_span">Contact</span>
         </li>
+        <li class="navbar_list_item">
+          <span class="item_span">🇪🇸 / 🇬🇧</span>
+        </li>
       </ul>
     </nav>
 
     <!-- HERO SECTION -->
     <div class="hero_section">
       <div class="hero_section_titles">
-        <h1
-          style="
-            margin: 0;
-            font-size: 3.5rem;
-            color: white;
-            padding-bottom: 3px;
-          "
-        >
+        <h1 style="margin: 0; font-size: 4.5rem; color: white">
           Pablo Monís Álvarez
         </h1>
-        <h2 style="margin: 0; font-size: 1.2rem; font-weight: 1; color: white">
+
+        <h3
+          style="
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 1;
+            color: white;
+            margin-top: -10px;
+          "
+        >
           Software Developer based in Málaga
-        </h2>
+        </h3>
       </div>
     </div>
 
-    <!-- INTRO -->
+    <!-- ABOUT ME -->
     <style>
+      .container_about {
+        padding-left: 70px;
+        padding-right: 70px;
+        padding-top: 40px;
+      }
+
       .intro_img {
         width: 100%;
         display: block;
@@ -117,9 +130,28 @@
         justify-self: center;
         padding-top: 15px;
       }
+
+      .intro_img_teamwork {
+        width: 100%;
+        display: block;
+        max-width: 270px;
+        justify-self: center;
+        padding-top: 15px;
+        animation: girar 30s linear infinite;
+      }
+
+      @keyframes girar {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
       .first_section {
-        margin-top: 5vh;
         padding: 30px;
+        padding-top: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -139,6 +171,7 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
       }
+      /*
       .inside_first {
         padding-left: 50px;
         padding-right: 30px;
@@ -148,16 +181,62 @@
       }
       .inside_third {
         padding-left: 50px;
+        padding-right: 30px;
+      }
+        */
+
+      .content_scroll {
+        display: grid;
+        place-items: center;
+        margin-top: 30px;
+      }
+      .box_scroll {
+        border-right: 3px solid;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(30) infinite alternate,
+          blink 0.5s step-end infinite;
+        width: 0;
+      }
+
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        60%,
+        100% {
+          width: 21ch;
+        }
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
       }
     </style>
-    <div class="container">
+
+    <div class="container_about">
+      <div class="content_scroll">
+        <h2
+          style="text-align: center; margin-top: 60px; font-size: 5vh"
+          class="box_scroll"
+        >
+          A little bit about me..
+        </h2>
+      </div>
+
       <!-- pt 1-->
       <div class="first_section">
         <img src="./img/user.png" class="intro_img" />
         <div class="inside_first">
           <h2>Meet the developer</h2>
           <p>
-            I'm an Web Application Developer who loves learning, working with
+            I'm a Web Application Developer who loves learning, working with
             others, and building useful things.
           </p>
         </div>
@@ -175,7 +254,7 @@
         </div>
         <img
           src="./img/teamwork.png"
-          class="intro_img"
+          class="intro_img_teamwork"
           style="margin-left: 30px"
         />
       </div>
@@ -199,35 +278,35 @@
       <div class="move">
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/nike-4.svg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-iFC6k8ZpqwQjDj-I4ekrh92xnQzWR2bHQw&s"
             alt=""
             class="img_slider"
           />
         </div>
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/converse-4239.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png"
             alt=""
             class="img_slider"
           />
         </div>
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/topper.svg"
+            src="https://blogs.masterhacks.net/wp-content/uploads/2019/10/masterhacks_php_vulnerabilidad_fpm_nginx.png"
             alt=""
             class="img_slider"
           />
         </div>
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/adidas.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png"
             alt=""
             class="img_slider"
           />
         </div>
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/reebok-5.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
             alt=""
             class="img_slider"
           />
@@ -235,14 +314,14 @@
         <div class="box">
           <!--Slide-->
           <img
-            src="https://cdn.worldvectorlogo.com/logos/puma.svg"
+            src="https://cdn.sanity.io/images/3do82whm/next/a69e3ba2441d35dd1a7945e826064708f30c10a9-1000x667.jpg"
             alt=""
             class="img_slider"
           />
         </div>
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/diesel-3.svg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsHhT0lhtqSDNWxRp-jWjGiqMvYce069W8uA&s"
             alt=""
             class="img_slider"
           />
@@ -252,49 +331,21 @@
 
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/nike-4.svg"
+            src="https://www.armadilloamarillo.com/wp-content/uploads/spring-boot-ok.png"
             alt=""
             class="img_slider"
           />
         </div>
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/converse-4239.svg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/2048px-Godot_icon.svg.png"
             alt=""
             class="img_slider"
           />
         </div>
         <div class="box">
           <img
-            src="https://cdn.worldvectorlogo.com/logos/topper.svg"
-            alt=""
-            class="img_slider"
-          />
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/adidas.svg"
-            alt=""
-            class="img_slider"
-          />
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/reebok-5.svg"
-            alt=""
-            class="img_slider"
-          />
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/puma.svg"
-            alt=""
-            class="img_slider"
-          />
-        </div>
-        <div class="box">
-          <img
-            src="https://cdn.worldvectorlogo.com/logos/diesel-3.svg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTdlxpN40oRq28d7owUaaoj4y37IjSn5RNA&s"
             alt=""
             class="img_slider"
           />
@@ -313,10 +364,10 @@
       .slider .move {
         display: flex;
         width: calc(250px * 14);
-        animation: animacion 50s linear infinite;
+        animation: moving 40s linear infinite;
       }
 
-      @keyframes animacion {
+      @keyframes moving {
         0% {
           transform: translateX(0);
         }
@@ -331,16 +382,14 @@
       }
 
       .img_slider {
-        width: 250px;
+        width: 125px;
         height: 100px;
       }
     </style>
 
-    <div style="">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repellat
-      doloribus iusto enim ut accusantium culpa corporis repudiandae recusandae
-      dolores odit nulla, eum quo quae, totam obcaecati? Dicta, voluptate
-      consequuntur!
+    <div style="height: 300px;">
+      
     </div>
+
   </body>
 </html>
