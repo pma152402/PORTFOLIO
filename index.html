@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <style>
+      html {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+      body {
+        margin: 0;
+        margin-top: 51px;
+      }
+
+      .navbar {
+        border-bottom: 2px solid black;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        background-color: white;
+      }
+
+      .navbar_list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+
+      .navbar_list_item {
+        color: black;
+        font-size: 1.05rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .item_span {
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .navbar_list_item span:hover {
+        color: rgb(0, 140, 255);
+        transform: scale(1.1);
+      }
+
+      /* HERO SECTION */
+      .hero_section {
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.1)
+          ),
+          url("img/malaga.jpg");
+        background-repeat: no-repeat;
+        background-position: 30%;
+        background-size: cover;
+        height: 330px;
+        border-bottom: 2px solid black;
+      }
+
+      .hero_section_titles {
+        padding-top: 200px;
+        text-shadow: 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black,
+          0px -1px 0px black;
+        margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <ul class="navbar_list">
+        <li class="navbar_list_item">
+          <span class="item_span">About Me</span>
+        </li>
+        <li class="navbar_list_item">
+          <span class="item_span">Educations</span>
+        </li>
+        <li class="navbar_list_item">
+          <span class="item_span">Projects</span>
+        </li>
+        <li class="navbar_list_item">
+          <span class="item_span">Contact</span>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero_section">
+      <div class="hero_section_titles">
+        <h1
+          style="
+            margin: 0;
+            font-size: 3.5rem;
+            color: white;
+            padding-bottom: 3px;
+          "
+        >
+          Pablo Monís Álvarez
+        </h1>
+        <h2 style="margin: 0; font-size: 1.2rem; font-weight: 1; color: white">
+          Software Developer based in Málaga
+        </h2>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+    <style>
+      .intro_img {
+        width: 100%;
+        display: block;
+        max-width: 270px;
+        justify-self: center;
+        padding-top: 15px;
+      }
+      .first_section {
+        margin-top: 5vh;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .second_section {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      .third_section {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+      .inside_first {
+        padding-left: 50px;
+        padding-right: 30px;
+      }
+      .inside_second {
+        padding-left: 50px;
+      }
+      .inside_third {
+        padding-left: 50px;
+      }
+    </style>
+    <div class="container">
+      <!-- pt 1-->
+      <div class="first_section">
+        <img src="./img/user.png" class="intro_img" />
+        <div class="inside_first">
+          <h2>Meet the developer</h2>
+          <p>
+            I'm an Web Application Developer who loves learning, working with
+            others, and building useful things.
+          </p>
+        </div>
+      </div>
+
+      <!-- pt 2-->
+      <div class="second_section">
+        <div class="inside_second">
+          <h2>Skills</h2>
+          <p>
+            Responsible and motivated, with an advanced level of English. I'm a
+            creative thinker who enjoys solving problems and contributing to
+            effective teamwork.
+          </p>
+        </div>
+        <img
+          src="./img/teamwork.png"
+          class="intro_img"
+          style="margin-left: 30px"
+        />
+      </div>
+
+      <!-- pt 3-->
+      <div class="third_section">
+        <img src="./img/pc.png" class="intro_img" />
+        <div class="inside_third">
+          <h2>Technologies</h2>
+          <p>
+            I've always enjoyed exploring how things work, coding gives me the
+            perfect playground to learn, build, and create. <br />Here are some
+            of the technologies and tools I work with:
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="slider">
+      <div class="move">
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/nike-4.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/converse-4239.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/topper.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/adidas.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/reebok-5.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <!--Slide-->
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/puma.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/diesel-3.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+
+        <!-- 2da vuelta -->
+
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/nike-4.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/converse-4239.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/topper.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/adidas.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/reebok-5.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/puma.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+        <div class="box">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/diesel-3.svg"
+            alt=""
+            class="img_slider"
+          />
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .slider {
+        background: #ffffff;
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .slider .move {
+        display: flex;
+        width: calc(250px * 14);
+        animation: animacion 50s linear infinite;
+      }
+
+      @keyframes animacion {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 7));
+        }
+      }
+
+      .slider .box {
+        height: 100px;
+        width: 250px;
+      }
+
+      .img_slider {
+        width: 250px;
+        height: 100px;
+      }
+    </style>
+
+    <div style="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad repellat
+      doloribus iusto enim ut accusantium culpa corporis repudiandae recusandae
+      dolores odit nulla, eum quo quae, totam obcaecati? Dicta, voluptate
+      consequuntur!
+    </div>
+  </body>
+</html>
